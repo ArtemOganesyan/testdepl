@@ -15,6 +15,7 @@ resource "aws_instance" "web_server" {
 
   user_data = <<-EOF
               #!/bin/bash
+              amazon-linux-extras install epel
               yum update -y
               EOF
 }
